@@ -1,0 +1,8 @@
+<h2 class="mb-3">My activities</h2>
+
+<div class="floatDiv p-2 mb-2 text-center">
+    <app-upload-file></app-upload-file>
+</div>
+@for (activity of activities; track $index) {
+    <app-activity-card [activity]="activity"></app-activity-card>
+}

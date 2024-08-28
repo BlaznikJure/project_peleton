@@ -1,0 +1,121 @@
+/* You can add global styles to this file, and also import other style files */
+
+.secondary-bg{
+    background-color: #49c5b6;
+    color: #fff;
+}
+
+.floatDiv {
+    background-color: rgb(255, 255, 255);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    color: #000;
+    border-radius: 8px;
+  }
+
+  .activity-card {
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    margin-bottom: 20px;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+  }
+  .activity-header {
+    display: flex;
+    align-items: center;
+    margin-bottom: 15px;
+  }
+  .activity-icon {
+    width: 30px;
+    height: 30px;
+    margin-right: 15px;
+  }
+  .activity-user-info {
+    display: flex;
+    flex-direction: column;
+  }
+  .activity-user-name {
+    font-weight: bold;
+    margin: 0;
+  }
+  .activity-time {
+    color: #888;
+    font-size: 14px;
+  }
+  .activity-map {
+    background-color: #eee;
+    height: 200px;
+    border-radius: 8px;
+    margin-bottom: 15px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 14px;
+    color: #888;
+  }
+  .activity-details {
+    display: flex;
+    justify-content: space-around;
+  }
+  .activity-stat {
+    text-align: center; 
+  }
+  .activity-stat-value {
+    font-size: 18px;
+    font-weight: bold;
+    margin: 0;
+  }
+  .activity-stat-label {
+    color: #888;
+    font-size: 14px;
+  }
+
+  ul {
+      list-style-type: none;
+      padding: 0;
+  }
+  li {
+      margin: 10px 0;
+      padding: 10px;
+      border-radius: 4px;
+      background-color: #fff;
+      box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+      position: relative;
+  }
+  li::before {
+      content: '';
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      width: 100%;
+      height: 4px;
+      border-radius: 0 0 4px 4px;
+  }
+  .all-activities::before {
+      background-color: gray;
+  }
+  .cycling::before {
+      background-color: limegreen;
+  }
+  .hiking::before {
+      background-color: brown;
+  }
+  .swimming::before {
+      background-color: dodgerblue;
+  }
+  .running::before {
+      background-color: orange;
+  }
+
+  .solid-border{
+    border: 2px solid lightgrey;
+  }
+
+  .curved-border{
+    border-radius: 10px;
+  }
+
+  .hover-effect:hover{
+    background-color: lightgrey;
+  } 

@@ -1,0 +1,42 @@
+
+<main>
+  <div class="row secondary-bg text-center">
+    <h1>Name of the project</h1>
+  </div>
+
+
+  <div class="row mt-0">
+    <div class="col-3 p-3 secondary-bg">
+      <app-activity-menu></app-activity-menu>
+    </div>
+
+    <div class="col-6 p-3">
+
+        <!-- Only activities and monthly stats -->
+        @if (currentMenu === 'Activities') {
+          <div class="m-1 floatDiv p-3">
+            <app-monthly-stats></app-monthly-stats>
+          </div>
+          <div class="m-1 floatDiv p-3 mt-3">
+            <app-activity-list></app-activity-list>
+          </div>
+        }
+
+        <!-- Only stats -->
+        @if (currentMenu === 'Stats') {
+          <div class="m-1 floatDiv p-3 mt-3">
+            <app-statistics></app-statistics>
+          </div>
+        }
+    
+      
+    </div>
+
+    <div class="col-3 p-3 secondary-bg">
+      <app-sidemenu (menuSelected)="onMenuSelected($event)"></app-sidemenu>
+    </div>
+
+  </div>
+
+</main>
+

@@ -1,0 +1,35 @@
+ul {
+    list-style-type: none; /* Remove default list styling */
+    padding: 0;
+    margin: 0;
+  }
+  
+  ul li {
+    position: relative;
+    cursor: pointer;
+    overflow: hidden; /* Ensures the pseudo-element doesn't overflow */
+    padding: 10px; /* Add padding as needed */
+    border-bottom: 2px solid transparent; /* Initial border is transparent */
+    transition: border-color 0.3s; /* Smooth transition for border color */
+  }
+  
+  ul li::before {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: -100%; /* Start the pseudo-element off-screen to the left */
+    width: 100%;
+    height: 2px; /* Height of the border */
+    background-color: #49c5b6; /* Color of the border */
+    transition: left 0.3s; /* Smooth transition for the border effect */
+    z-index: 1; /* Ensure the pseudo-element is behind the text */
+  }
+  
+  ul li:hover::before {
+    left: 0; /* Move the pseudo-element to cover the bottom border */
+  }
+  
+  ul li span {
+    position: relative; /* Ensure the text is above the pseudo-element */
+    z-index: 2; /* Make sure the text is above the border */
+  }

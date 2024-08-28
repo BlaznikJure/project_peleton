@@ -1,0 +1,32 @@
+<div class="activity-card">
+    <div class="activity-header">
+      <span class="material-symbols-sharp activity-icon">
+        pedal_bike
+        </span>
+        <div class="activity-user-info">
+            <p class="activity-user-name">{{ activity.name }}</p>
+            <p class="activity-time">{{ activity.time }}</p>
+        </div>
+    </div>
+    <div class="activity-map">
+        Map Placeholder
+    </div>
+    <div class="activity-details">
+        <div class="activity-stat">
+            <p class="activity-stat-value">{{ activity.distance }}</p>
+            <p class="activity-stat-label">Miles</p>
+        </div>
+        <div class="activity-stat">
+            <p class="activity-stat-value">{{ activity.avgSpeed }}</p>
+            <p class="activity-stat-label">Avg Speed</p>
+        </div>
+        <div class="activity-stat">
+            <p class="activity-stat-value">{{ activity.elevationGain }}</p>
+            <p class="activity-stat-label">Elevation Gain</p>
+        </div>
+        <div class="activity-stat">
+            <p class="activity-stat-value">{{ activity.duration }}</p>
+            <p class="activity-stat-label">Time</p>
+        </div>
+    </div>
+  </div>
