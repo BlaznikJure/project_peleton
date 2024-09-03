@@ -28,8 +28,16 @@ namespace peleton_back.Controllers {
             return await _mongoDBService.GetListAsync();
         }
 
-        // [HttpGet("get/activity/{id}")]
-        // public async Task<Activity> GetActivity() {}
+        [HttpGet("get/activity/{id}")]
+        public async Task<ActionResult<Activity>> GetActivity(string id) {
+            var activity = await _mongoDBService.GetActivityAsync(id); 
+            if (activity == null)
+            {
+                return BadRequest("I can't find the activity");
+            }
+
+            return Ok(activity);
+        }
 
         [HttpPost("post/activity")]
         public async Task<IActionResult> Post(IFormFile file){

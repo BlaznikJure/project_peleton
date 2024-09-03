@@ -13,7 +13,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("peleton_back")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+f34cbb270cfbc398bafa2184891a0feb62718213")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+3e5b2543c92bd782a2dcd1eb5b170ed4103a55a2")]
 [assembly: System.Reflection.AssemblyProductAttribute("peleton_back")]
 [assembly: System.Reflection.AssemblyTitleAttribute("peleton_back")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

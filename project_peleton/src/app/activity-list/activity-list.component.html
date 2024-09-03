@@ -3,6 +3,8 @@
 <div class="floatDiv p-2 mb-2 text-center">
     <app-upload-file></app-upload-file>
 </div>
+
+<!-- <button (click)="getList()">Give me the list Potter :D</button> -->
 @for (activity of activities; track $index) {
     <app-activity-card [activity]="activity"></app-activity-card>
 }

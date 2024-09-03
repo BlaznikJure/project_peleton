@@ -15,6 +15,17 @@ builder.Services.AddSwaggerGen();
 
 builder.Services.AddSingleton<IActivityService, ActivityService>();
 
+builder.Services.AddCors(options => {
+    options.AddPolicy("AllowAngularApp",
+    builder => builder
+        .WithOrigins("http://localhost:4200")
+        .AllowAnyMethod()
+        .AllowAnyHeader()
+        .AllowCredentials()
+    
+    );
+});
+
 var app = builder.Build();
 
 // Configure the HTTP request pipeline.
@@ -26,11 +37,7 @@ if (app.Environment.IsDevelopment())
 
 app.UseHttpsRedirection();
 
-app.UseCors(policy => 
-    policy.AllowAnyOrigin()
-          .AllowAnyMethod()
-          .AllowAnyHeader()
-);
+app.UseCors("AllowAngularApp");
 
 app.UseAuthorization();
 

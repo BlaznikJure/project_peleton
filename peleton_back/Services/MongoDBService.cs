@@ -25,5 +25,12 @@ namespace peleton_back.Services
             return await _activityCollection.Find(new BsonDocument()).ToListAsync();
         }
 
+        public async Task<Activity> GetActivityAsync(string id){
+            var filter = Builders<Activity>.Filter.Eq(a => a.Id, id);
+            var activity = await _activityCollection.Find(filter).FirstOrDefaultAsync(); 
+
+            return activity;
+        }
+
     }
 }
